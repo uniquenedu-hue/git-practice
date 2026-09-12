@@ -19,6 +19,9 @@ jobs:
       - name: Run Python application
         run: python3 hello.py
 
+      - name: Install pytest
+        run: pip install pytest
+
       - name: Run tests
         run: pytest
 
