@@ -36,5 +36,10 @@ jobs:
         env:
           MY_TEST_SECRET: ${{ secrets.MY_TEST_SECRET }}
 
+      - name: Show environment
+        run: echo "Running in $APP_ENV"
+        env:
+          APP_ENV: ${{ vars.APP_ENV }}
+
       - name: Show files
         run: ls -la
