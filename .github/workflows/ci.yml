@@ -55,3 +55,6 @@ jobs:
       - name: Main branch message
         if: github.ref == 'refs/heads/main'
         run: echo "This is the main branch"
+
+      - name: Show event type
+        run: echo "Workflow triggered by ${{ github.event_name }}"
