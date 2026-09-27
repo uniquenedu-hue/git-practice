@@ -51,3 +51,7 @@ jobs:
 
       - name: Show files
         run: ls -la
+
+      - name: Main branch message
+        if: github.ref == 'refs/heads/main'
+        run: echo "This is the main branch"
