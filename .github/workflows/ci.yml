@@ -62,3 +62,11 @@ jobs:
       - name: Pull request message
         if: github.event_name == 'pull_request'
         run: echo "This workflow was triggered by a pull request"
+
+  build:
+    needs: test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Build application
+        run: echo "Building application..."
